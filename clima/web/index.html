@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="weather-container">
+        <!-- Mapa con la ubicación -->
+        <div id="map">
+            <iframe id="map-frame" width="100%" height="150" style="border:0;"
+                    src="https://www.google.com/maps/embed/v1/place?key=TU_API_KEY_DE_GOOGLE&q=San+Francisco"
+                    allowfullscreen></iframe>
+        </div>
+
+        <!-- Campo de búsqueda de ciudad -->
+        <div class="search">
+            <input type="text" id="city-input" placeholder="Buscar ciudad..." />
+            <button onclick="buscarCiudad()">Buscar</button>
+        </div>
+
+        <div class="weather-info">
+            <h1 id="temperature">14°</h1>
+            <p id="description">Mostly Clear</p>
+            <div id="forecast">
+                <!-- Forecast will be populated here by JavaScript -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
